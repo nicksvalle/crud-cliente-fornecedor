@@ -1,1 +1,76 @@
-<p>fornecedores works!</p>
+<div class="row">
+  <div class="col-8 m-auto">
+
+    <form [formGroup]="formGroupClient">
+    <div class="mb-3">
+      <div class="display-6 text-center">
+        Cadastro de Fornecedor
+      </div>
+      <label for="name" class="form-label">Nome</label>
+      <input type="text" formControlName="name" class="form-control" id="name" placeholder="Nome">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Categoria</label>
+    <div class="form-check">
+      <input type="checkbox" formControlName="categoria" class="form-check-input" id="categoria-roupas" value="Roupas">
+      <label for="categoria-roupas" class="form-check-label">Roupas</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" formControlName="categoria" class="form-check-input" id="categoria-eletronicos" value="Eletrônicos">
+      <label for="categoria-eletronicos" class="form-check-label">Eletrônicos</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" formControlName="categoria" class="form-check-input" id="categoria-alimentos" value="Alimentos">
+      <label for="categoria-alimentos" class="form-check-label">Alimentos</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" formControlName="categoria" class="form-check-input" id="categoria-servicos" value="Serviços">
+      <label for="categoria-servicos" class="form-check-label">Serviços</label>
+    </div>
+    </div>
+    <div class="mb-3">
+      <label for="estado" class="form-label">Estado</label>
+      <select formControlName="estado" class="form-select" id="estado">
+        <option value="">Selecione um estado</option>
+        <option *ngFor="let estado of estados" [value]="estado.sigla">{{ estado.nome }}</option>
+      </select>
+    </div>
+    <div class="mb-3 d-flex justify-content-end">
+      <button type="button" class="btn btn-dark me-1" (click)="save()">Salvar</button>
+      <button type="button" class="btn btn-dark" (click)="clean()">Limpar</button>
+    </div>
+  </form>
+
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let fornecedores of fornecedores">
+      <th scope="row">{{fornecedores.id}}</th>
+      <td>{{fornecedores.name}}</td>
+      <td>{{fornecedores.email}}</td>
+      <td>
+        <span *ngFor="let cat of fornecedores.categoria">{{ cat }}</span>
+      </td>
+      <td>{{fornecedores.estado}}</td>
+      <td>
+        <button type="button" class="btn btn-dark me-1" (click)="edit(fornecedores)" >Editar</button>
+        <button type="button" class="btn btn-dark" (click)="delete(fornecedores)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

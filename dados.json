@@ -1,0 +1,27 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "name": "Nicolas",
+      "email": "nicolasdeoliveiravalle@gmail.com",
+      "sexo": "Masculino",
+      "estado": "SP"
+    },
+    {
+      "id": 2,
+      "name": "Kaue",
+      "email": "kaue@gmail.com",
+      "sexo": "Masculino",
+      "estado": "SP"
+    }
+  ],
+  "fornecedores": [
+    {
+      "id": 1,
+      "name": "Kaue",
+      "email": "kaue",
+      "categoria": true,
+      "estado": "MT"
+    }
+  ]
+}
