@@ -13,15 +13,43 @@
       "email": "kaue@gmail.com",
       "sexo": "Masculino",
       "estado": "SP"
+    },
+    {
+      "id": 3,
+      "name": "WIll",
+      "email": "will@",
+      "sexo": "Masculino",
+      "estado": "SP"
     }
   ],
   "fornecedores": [
     {
       "id": 1,
+      "name": "Nicolas",
+      "email": "nicolas@gmail.com",
+      "categoria": [
+        "Alimentos"
+      ],
+      "estado": "MS"
+    },
+    {
+      "id": 2,
       "name": "Kaue",
       "email": "kaue",
-      "categoria": true,
-      "estado": "MT"
+      "categoria": [
+        "Roupas",
+        "Eletrônicos"
+      ],
+      "estado": "AL"
+    },
+    {
+      "id": 3,
+      "name": "WIll",
+      "email": "will@gmail.com",
+      "categoria": [
+        "Alimentos"
+      ],
+      "estado": "PB"
     }
   ]
 }

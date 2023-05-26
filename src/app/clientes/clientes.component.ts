@@ -15,7 +15,7 @@ export class ClientesComponent {
   isEditing : boolean = false;
   formGroupClient: FormGroup;
   ClientService: any;
-estado: any;
+  estado: any;
 
   constructor(private clientesService : ClientesService, private formBuilder : FormBuilder){
 
